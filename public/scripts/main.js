@@ -1,7 +1,7 @@
-profils_list = [new Profil()];
+profils_list = [new Profil("unknow","unknow","unknow","unknow","unknow","unknow",0,0)];
 
 for (let i = 0; i < 99; i++) {
-	let p = new Profil("unkonw");
+	let p = new Profil("unknow","unknow","unknow","unknow","unknow","unknow",0,0);
  	profils_list.push(p);
 
 	var newProfil = document.createElement('div');
