@@ -13,10 +13,8 @@ router.get('/', function(req, res, next) {
   db.collection("users").find({}).toArray(function(err,result) {
     if (err) throw err;
     console.log(result);
+    res.render('profils', { user: result });
   })
-  res.render('searchHero', { title: 'Express' });
-  // res.render('searchHero', { hero: heros});
-  res.send('respond with a resource');
 });
 
 module.exports = router;
