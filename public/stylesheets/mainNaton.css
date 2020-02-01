@@ -92,6 +92,9 @@ body {
 .margin-l-lg {
     margin-left: 30px;
 }
+.margin-l-big {
+    margin-left: 60px;
+}
 
 .margin-r {
     margin-right: 15px;
@@ -104,6 +107,9 @@ body {
 }
 .margin-r-lg {
     margin-right: 30px;
+}
+.margin-r-big {
+    margin-right: 60px;
 }
 
 .margin-t {
