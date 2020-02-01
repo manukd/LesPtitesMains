@@ -58,7 +58,8 @@
 		let users = <%- JSON.stringify(user) %>
 		console.log("oui:");
 		console.log(users);
-		for (let i = 0; i < 1; i++) {
+		console.log(users.length);
+		for (let i = 0; i < users.length; i++) {
 			var p = new Profil(users[i].name,users[i].surname,users[i].age, users[i].gender, users[i].address, users[i].power, users[i].saved_lives, users[i].arrested_baddies);
 			profils_list.push(p);
 			console.log(p);
