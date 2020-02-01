@@ -18,23 +18,26 @@ function loadProfils(){
 }
 
 
-function loadThreats(){
-	for (let i = 0; i < 99; i++) {
-		let t = new Threat("unknow","unknow","unknow","unknow","unknow","unknow",0,0);
-	 	profils_list.push(t);
-
-		var newProfil = document.createElement('div');
-		newProfil.setAttribute('class',' m-1 d-inline profil');
-		newProfil.onclick = t.showDetail;
-		newProfil.innerHTML = '<img class="rounded-image w-10" src="images/threat.png">';
-
-		document.getElementById('background-flow').appendChild(newProfil);
-	}
-}
+// function loadThreats(){
+// 	for (let i = 0; i < 99; i++) {
+// 		let t = new Threat("unknow","unknow","unknow","unknow","unknow","unknow",0,0);
+// 	 	profils_list.push(t);
+//
+// 		var newProfil = document.createElement('div');
+// 		newProfil.setAttribute('class',' m-1 d-inline profil');
+// 		newProfil.onclick = t.showDetail;
+// 		newProfil.innerHTML = '<img class="rounded-image w-10" src="images/threat.png">';
+//
+// 		document.getElementById('background-flow').appendChild(newProfil);
+// 	}
+// }
 
 function closeDetail(){
 	var profilDetail = document.getElementById('profil_detail');
 	document.body.removeChild(profilDetail);
 }
 
-
+function dismissBlock(i){
+	var toDelete = document.getElementById(i);
+	document.getElementById('background-flow').removeChild(toDelete);
+}
