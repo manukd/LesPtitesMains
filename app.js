@@ -42,7 +42,7 @@ app.use('/profils', profil);
 app.use('/connexion', connexion);
 app.use('/accueil', accueil);
 app.use('/crime', report);
-app.use('/threats', threats)
+app.use('/threats', threats);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
