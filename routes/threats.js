@@ -8,6 +8,4 @@ router.get('/', function(req, res, next) {
     res.render('threats', {sess: req.session});
 });
 
-
-
 module.exports = router;

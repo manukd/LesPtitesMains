@@ -19,25 +19,25 @@
 
 	<body class="text-center fade-in">
 
-	   	<video class="video-fluid z-depth-1" autoplay loop controls muted>
-          <source src="/vid/sujet.mp4" type="video/mp4" />
-        </video>
-
 		<header class="flaot-none align-text-center text-center my-5">
 		    <div class="inner">
 		        	<h3 class="title">NOM DU SITE</h3>
 		    	    <nav class="nav nav-masthead justify-content-center">
 		            <a class="nav-link active" href="/">Accueil</a>
 		            <a class="nav-link" href="/profils">Profils</a>
-					<a class="nav-link" href="/crime">Crimes</a>
+					<a class="nav-link" href="/crime">Reporter un crime</a>
 					<% if(sess.username != undefined) {%>
 						<a class="nav-link" href="/threats">Les menaces</a>
 					<%} else {%>
-						<a class="nav-link" href="/connexion">Sign up / Sing in</a>
+						<a class="nav-link" href="/connexion">Connexion / Inscription</a>
 					<%}%>
 		        </nav>
 		    </div>
 	   	</header>
+
+	   	<video class="video-fluid z-depth-1" autoplay loop controls muted>
+          <source src="/vid/sujet.mp4" type="video/mp4" />
+        </video>
 
 		<div id="weNeedYou" class="my-5 text-light" >
 			<p class="text-center w-100">
