@@ -6,152 +6,7 @@ body {
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
-
-    background-color: #0c0c0c;
 }
-
-
-.form-signin {
-  width: 100%;
-  max-width: 330px;
-  padding: 15px;
-  margin: auto;
-}
-
-.form-signin .form-control {
-  position: relative;
-  box-sizing: border-box;
-  height: auto;
-  padding: 10px;
-  font-size: 16px;
-}
-
-.form-signin .form-control:focus {
-  z-index: 2;
-}
-
-.rounded-25{
-  border-radius: 30px
-}
-
-.w-10{
-  width: 10%
-}
-.w-20{
-  width: 20%
-}
-.w-30{
-  width: 30%
-}
-.w-40{
-  width: 40%
-}
-.w-60{
-  width: 60%
-}
-.w-70{
-  width: 70%
-}
-.w-80{
-  width: 80%
-}
-.w-90{
-  width: 90%
-}
-
-.search-block{
-  position: fixed;
-  bottom: 45%;
-  z-index: 2;
-  /* left: 50%; */
-}
-
-.l-10{
-  left: 10%;
-}
-
-.rounded-image{
-  border-radius: 50%
-}
-
-.nav-link{
-  color: gray;
-  text-shadow: black 1px 0 5px;
-  text-decoration: none;
-}
-
-.active{
-  color: white;
-  text-decoration: none;
-}
-
-.nav-link:hover{
-  color: lightgray;
-}
-
-.title{
-  color: rgba(150,20,20,1);
-  font-size: 400%;
-  font-family: Ebrima;
-  font-weight: bold;
-
-  text-shadow: black 1px 0 5px;
-}
-
-.profil{
-  opacity: 0.4;
-}
-
-.profil:hover {
-  opacity: 1;
-}
-
-#background-flow{
-  animation-name: movement;
-  animation-duration: 60s;
-  animation-iteration-count: infinite;
-}
-
-@keyframes movement {
-  0%  {margin-top: 0px;}
-  50% {margin-top: -200px;}
-  100%  {margin-top: 0px;}
-}
-
-.noselect {
-  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Opera and Firefox */
-}
-
-/* Fade IN and OUT annimation */
-
-.fade-in {
-  animation : fadeInAnimation 1.5s;
-}
-
-.fade-out{
-  animation : fadeOutAnimation 1s;
-}
-
-@keyframes fadeInAnimation{
-  from { opacity : 0; }
-  to { opacity: 1; }
-}
-
-@keyframes fadeOutAnimation {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
-
 
 /* Text Align */
 .text-c {
@@ -175,6 +30,10 @@ body {
     color: rgba(255, 235, 59, 0.432)
 }
 
+.text-darkred {
+    color: rgba(252, 44, 44, 1);
+}
+
 /* Lines */
 
 .line-b {
@@ -186,8 +45,8 @@ body {
     border-radius: 3px;
 }
 .form-button {
-    background-color: rgba(255, 235, 59, 0.24);
-    border-color: rgba(255, 235, 59, 0.24);
+    background-color: rgba(252, 44, 44, 0.4);
+    border-color: rgba(252, 44, 44, 0.4);
     color: #e6e6e6;
 }
 .form-button:hover,
@@ -198,8 +57,8 @@ body {
 .form-button:active:hover,
 .form-button.active:hover,
 .form-button.active:focus {
-    background-color: rgba(255, 235, 59, 0.473);
-    border-color: rgba(255, 235, 59, 0.473);
+    background-color: rgba(252, 44, 44, 0.6);
+    border-color: rgba(252, 44, 44, 0.6);
     color: #e6e6e6;
 }
 .button-l {
@@ -279,7 +138,7 @@ body {
 .border-line {
     background-color: #5f5f5f;
     background-image: none;
-    border: 1px solid #424242;
+    border: 1px solid #f42c2c;
     border-radius: 1px;
     color: inherit;
     display: block;
@@ -289,7 +148,7 @@ body {
 }
 .form-control:focus,
 .border-line:focus {
-    border-color: #FFEB3B;
+    border-color: #f42c2c;
     background-color: #616161;
     color: #e6e6e6;
 }
@@ -305,7 +164,7 @@ body {
     background-color: #3a3a3aa2;
     color: inherit;
     padding: 15px 20px 20px 20px;
-    border-color: #FFEB3B;
+    border-color: #f42c2c;
     border-image: none;
     border-style: solid solid none;
     border-width: 1px 0;
@@ -316,13 +175,21 @@ body {
 .main-bg {
 
     background: #424242;
-    background: linear-gradient( #424242, #212121);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: linear-gradient( #424242, #212121) fixed;
 }
 
 /* Login & Register Pages*/
 
 .login-container {
     max-width: 400px;
+    z-index: 100;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+.info-container {
+    width: 40%;
     z-index: 100;
     margin: 0 auto;
     padding-top: 100px;
@@ -339,7 +206,6 @@ body {
     font-weight: 800;
     letter-spacing: -10px;
     margin-bottom: 0;
-
 }
 
 .video-fluid {
@@ -351,4 +217,15 @@ body {
 .adresse {
     width: 90%;
 }
-
+.littleBubble {
+    max-height: 150px;
+    min-height: 50px;
+    max-width: 150px;
+    min-width: 50px;
+}
+.bigBubble {
+    max-height: 500px;
+    min-height: 300px;
+    max-width: 500px;
+    min-width: : 300px;
+}
