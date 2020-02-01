@@ -13,7 +13,7 @@ router.get('/', function(req, res, next) {
   db.collection("users").find({}).toArray(function(err,result) {
     if (err) throw err;
     console.log(result);
-    res.render('profils', { user: result });
+    res.render('profils', { user: result , sess: req.session });
   })
 });
 
