@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var bodyParser = require('body-parser');
 var multer = require('multer');
+const session = require('express-session');
 
 var mongoose = require('mongoose');
 
@@ -16,10 +17,17 @@ router.get('/', function(req, res, next) {
 router.post('/', function(req, res, next) {
     db.collection("users").find({username: req.body.username, password: req.body.password}).toArray(function(err,result) {
         if (err) throw err;
-        console.log("connect");
-        console.log(result);
-    })
-    res.send('respond with a resource');
+        if (result.length == 1) {
+            var sess = req.session;
+            sess.username = req.body.username;
+        }
+
+        if (sess != undefined) {
+            res.redirect('accueil')
+        } else {
+            res.redirect('connexion')
+        }
+    });
 });
 
 module.exports = router;

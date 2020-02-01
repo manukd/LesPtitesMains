@@ -1,9 +1,10 @@
 var createError = require('http-errors');
 var express = require('express');
+const session = require('express-session');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
+var sess = session;
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var searchHero = require('./routes/searchHero');
@@ -11,8 +12,8 @@ var connect = require('./routes/connect');
 var inscription = require('./routes/inscription');
 var agence = require('./routes/agence');
 var profil = require('./routes/profil');
-var connexion = require('./routes/connexion')
-
+var connexion = require('./routes/connexion');
+var accueil = require('./routes/accueil')
 
 var app = express();
 // view engine setup
@@ -25,6 +26,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(session({secret: 'ssshhhhh',saveUninitialized: true,resave: true}));
+
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/searchhero', searchHero);
@@ -33,6 +37,7 @@ app.use('/inscription', inscription);
 app.use('/agence', agence);
 app.use('/profils', profil);
 app.use('/connexion', connexion);
+app.use('/accueil', accueil);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
