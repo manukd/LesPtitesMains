@@ -87,7 +87,9 @@
 			var newProfil = document.createElement('div');
 			newProfil.setAttribute('class',' m-1 d-inline profil');
 			newProfil.innerHTML = '<div class="d-inline" onclick="showDetail('+i+');"><img class="rounded-image w-10" src="images/profil.png"></div>';
-
+			<% if (move == 0) { %>
+				document.getElementById('background-flow').style.animation = "none";
+			<% } %>
 			document.getElementById('background-flow').appendChild(newProfil);
 		}
 
