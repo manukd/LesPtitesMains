@@ -8,6 +8,10 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var searchHero = require('./routes/searchHero');
 var connect = require('./routes/connect');
+var inscription = require('./routes/inscription');
+var agence = require('./routes/agence');
+var profil = require('./routes/profil');
+
 
 var app = express();
 // view engine setup
@@ -24,6 +28,9 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/searchhero', searchHero);
 app.use('/connect', connect);
+app.use('/inscription', inscription);
+app.use('/agence', agence);
+app.use('/profil', profil);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

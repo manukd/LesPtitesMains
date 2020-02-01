@@ -22,7 +22,7 @@ var user = new mongoose.Schema({
 var User = mongoose.model('Users', user);
 
 router.get('/', function(req, res, next) {
-  res.render('accueil', { title: 'Express' });
+  res.render('index', { title: 'Express' });
 });
 
 router.post('/', function(req, res, next) {
