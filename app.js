@@ -15,7 +15,7 @@ var profil = require('./routes/profil');
 var connexion = require('./routes/connexion');
 var accueil = require('./routes/accueil');
 var report = require('./routes/report');
-var threats = require('./routes/threats')
+var threats = require('./routes/threats');
 
 
 var app = express();
@@ -41,7 +41,7 @@ app.use('/agence', agence);
 app.use('/profils', profil);
 app.use('/connexion', connexion);
 app.use('/accueil', accueil);
-app.use('/report', report);
+app.use('/crime', report);
 app.use('/threats', threats)
 
 // catch 404 and forward to error handler
