@@ -27,11 +27,28 @@ router.get('/', function(req, res, next) {
 router.post('/', function(req, res, next) {
     var sess = req.session
     if (sess.username) {
+      if (req.body.choiceMode=="1") {
+        db.collection("threats").find({time: req.body.requete}).toArray(function(err,result) {
+            if (err) throw err;
+            console.log(result);
+            res.render('threats', { threats: result , sess: req.session });
+        })
+      }
+      else if (req.body.choiceMode=="2") {
+        db.collection("threats").find({crime: req.body.requete}).toArray(function(err,result) {
+            if (err) throw err;
+            console.log(result);
+            res.render('threats', { threats: result , sess: req.session });
+        })
+      }
+      else {
         db.collection("threats").find({identity: req.body.requete}).toArray(function(err,result) {
             if (err) throw err;
             console.log(result);
             res.render('threats', { threats: result , sess: req.session });
         })
+      }
+
     }
     else {
         res.render('error', {message: "Désolé, cette page est seulement accéssible aux héros"});
