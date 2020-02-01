@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
       res.render('threats', {sess: req.session});
     }
     else {
-      res.render('error', {message: "Désolé, cette page est seulement accéssible aux héros"});
+      res.render('error', {message: "Désolé, cette page est seulement accessible aux héros"});
     }
 });
 
