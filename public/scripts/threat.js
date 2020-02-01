@@ -20,23 +20,23 @@ class Threat{
 		detail_view.innerHTML = '\
 								<div class="row margin-t">\
 		                            <div class="col">\
-		                                <label class="text-whitesmoke ">Nom : '+ this.lastname +'</label>\
+		                                <label class="text-whitesmoke ">Latitude : '+ this.lastname +'</label>\
 		                            </div>\
 		                            <div class="col">\
-		                                <label class="text-whitesmoke ">Prénom : '+ this.firstname +'</label>\
-		                            </div>\
-		                        </div>\
-		                        <div class="row margin-t">\
-		                            <div class="col">\
-		                                <label class="text-whitesmoke ">Date de naissance : '+ this.birth +'</label>\
-		                            </div>\
-		                            <div class="col">\
-		                                <label class="text-whitesmoke">Genre : '+ this.genre +'</label>\
+		                                <label class="text-whitesmoke ">Longitude : '+ this.firstname +'</label>\
 		                            </div>\
 		                        </div>\
 		                        <div class="row margin-t">\
 		                            <div class="col">\
-		                                <label class="text-whitesmoke ">Adresse : '+ this.address +'</label>\
+		                                <label class="text-whitesmoke ">Horaire '+ this.birth +'</label>\
+		                            </div>\
+		                            <div class="col">\
+		                                <label class="text-whitesmoke">Type de crime : '+ this.genre +'</label>\
+		                            </div>\
+		                        </div>\
+		                        <div class="row margin-t">\
+		                            <div class="col">\
+		                                <label class="text-whitesmoke ">Identité : '+ this.address +'</label>\
 		                            </div>\
 		                        </div>\
 		                        <div class="row margin-t">\
@@ -52,7 +52,10 @@ class Threat{
 		                                <label class="text-whitesmoke ">Nombre de criminels arrêtés : '+ this.nbBadGuys +'</label>\
 		                            </div>\
 		                        </div></br>\
-		                        	<button class="row btn btn-danger rounded-25 m-auto" type="button" onclick="closeDetail();">X</button>';
+		                        <div class="row">\
+		                        	<button class="row btn btn-danger rounded-25 m-auto" type="button" onclick="closeDetail();">X</button>\
+		                        	<button class="row btn btn-success rounded-25 m-auto" type="button" onclick="deleteThreat();">Menace éliminé !</button>\
+		                        </div>';
 
 
 		document.body.appendChild(detail_view);
