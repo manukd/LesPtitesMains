@@ -25,7 +25,7 @@ router.post('/', function(req, res, next) {
         if (sess != undefined) {
             res.redirect('/')
         } else {
-            res.redirect('connexion')
+            res.render('error', {message: "Vos identifiants n'ont pas été reconnus"})
         }
     });
 });
