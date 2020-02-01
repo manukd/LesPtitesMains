@@ -31,7 +31,7 @@ app.use('/searchhero', searchHero);
 app.use('/connect', connect);
 app.use('/inscription', inscription);
 app.use('/agence', agence);
-app.use('/profil', profil);
+app.use('/profils', profil);
 app.use('/connexion', connexion);
 
 // catch 404 and forward to error handler
