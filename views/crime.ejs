@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>Report d'un crime</title>
+        <link rel='stylesheet' href='/stylesheets/mainNaton.css' />
+        <link rel='stylesheet' href='/stylesheets/animate.min.css' />
+        <link rel='stylesheet' href='/stylesheets/font-awesome.min.css' />
+        <link rel='stylesheet' href='/stylesheets/bootstrap-grid.min.css' />
+        <link rel='stylesheet' href='/stylesheets/bootstrap-reboot.min.css' />
+
+    </head>
+
+    <body class="main-bg">
+        <div class="info-container text-c animated flipInX">
+                <div class="mb-4">
+                    <h1 class="logo-badge text-whitesmoke"><img src="/images/smile_bad.png" alt="smile" width="120" height="120"></h1>
+                </div>
+                <div class="container-content text-l">
+                    <form class="margin-t" action="/inscription" method="post">
+                        <div class="row">
+                            <div class="col">
+                                <label class="text-whitesmoke text-left">Latitude :</label>
+                                <input name="latitude" type="text" class="form-control" placeholder="" required="">
+                            </div>
+                            <div class="col">
+                                <label class="text-whitesmoke ">Longitude :</label>
+                                <input name="longitude" type="text" class="form-control" placeholder="" required="">
+                            </div>
+                        </div>
+                        <div class="row margin-t">
+                            <div class="col">
+                                <label class="text-whitesmoke ">Horaire :</label>
+                                <input name="time" type="time" class="form-control" placeholder="" required="">
+                            </div>
+                            <div class="col">
+                                <label class="text-whitesmoke">Type de crime :</label>
+                                <select name="crime" class="custom-select  form-control"  id="inlineFormCustomSelectPref">
+                                    <option selected>-</option>
+                                    <option value="1">Vol</option>
+                                    <option value="2">Agression</option>
+                                    <option value="3">Meurtre</option>
+                                    <option value="4">Utilisation abusive de pouvoir</option>
+                                    <option value="5">Excès de vitesse sur voie aérienne</option>
+                                    <option value="6">Tentative d'annihilation de la planète</option>
+                                    <option value="7">Autre</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row margin-t">
+                            <div class="col">
+                                <label class="text-whitesmoke ">Identité du méchant :</label>
+                                <input name="identity" type="text" class="form-control" placeholder="Facultative">
+                            </div>
+                        </div>
+
+                        <div class="row margin-t-lg justify-content-md-center">
+                            <div class="col-md-auto">
+                                <button type="submit" class="form-button">Report du crime</button>
+                            </div>
+                        </div>
+                    </form>
+                    <p class="text-c margin-t-lg text-whitesmoke"><small> Les p'tites mains &copy; 2020</small> </p>
+                </div>
+            </div>
+    </body>
+
+</html>
