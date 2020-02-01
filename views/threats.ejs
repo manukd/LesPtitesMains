@@ -23,7 +23,7 @@
 		          <h3 class="my-1 text-light"><%= sess.username %></h3>
 		        </div>
 	      	</header>
-		      	<form action="">
+		      	<form action="threats" method="post">
 				<table class="w-70 m-auto">
 					<tr>
 						<nav class="nav nav-masthead justify-content-center">
@@ -40,7 +40,7 @@
 					<tr>
 						<td class="pl-5">
 						  <label for="inputQuestion" class="sr-only ">Question</label>
-						  <input type="text" id="inputQuestion" class="form-control rounded-25" placeholder="Rechercher une menaces..." required="true" autofocus="">
+						  <input type="text" id="inputQuestion" name="requete" class="form-control rounded-25" placeholder="Rechercher une menaces..." required="true" autofocus="">
 						</td>
 						<td class="w-10 p-1 text-left">
 							<button id="inputBtnQuestion" class="btn btn-danger rounded-25 mx-2" type="submit" action="test()"><img  src="images/loupe.svg"  alt="" width="24" height="24" title="search"></button>

@@ -24,4 +24,18 @@ router.get('/', function(req, res, next) {
     }
 });
 
+router.post('/', function(req, res, next) {
+    var sess = req.session
+    if (sess.username) {
+        db.collection("threats").find({identity: req.body.requete}).toArray(function(err,result) {
+            if (err) throw err;
+            console.log(result);
+            res.render('threats', { threats: result , sess: req.session });
+        })
+    }
+    else {
+        res.render('error', {message: "Désolé, cette page est seulement accéssible aux héros"});
+    }
+});
+
 module.exports = router;
