@@ -20,7 +20,7 @@
 			<header class="row align-text-center text-center m-auto">
 		        <div class="inner w-20 m-auto">
 		          <img class="w-50" src="images/profil.png">
-		          <h3 class="my-1 text-light">NOM PRENOM</h3>
+		          <h3 class="my-1 text-light"><%= sess.username %></h3>
 		        </div>
 	      	</header>
 		      	<form action="">
@@ -77,5 +77,59 @@
 	<script type="text/javascript" src="scripts/threat.js"></script>
 	<script type="text/javascript" src="scripts/profil.js"></script>
 	<script type="text/javascript" src="scripts/main.js"></script>
-	<script type="text/javascript">loadThreats()</script>
+	<script type="text/javascript">
+	profils_list = [];
+
+	let threats = <%- JSON.stringify(threats) %>
+	for (let i = 0; i < threats.length; i++) {
+		let t = new Threat(threats[i].latitude, threats[i].longitude, threats[i].time, threats[i].crime, threats[i].identity);
+	 	profils_list.push(t);
+
+		var newProfil = document.createElement('div');
+		newProfil.id = i;
+
+		newProfil.setAttribute('class',' m-1 d-inline profil');
+		newProfil.innerHTML = '<div class="d-inline" onclick="showDetail('+i+');"><img class="rounded-image w-10" src="images/threat.png"></div>';
+
+		var flow = document.getElementById('background-flow');
+		flow.style.overflow = "auto";
+		flow.appendChild(newProfil);
+	}
+
+	function showDetail(i){
+		var detail_view = document.createElement('div');
+		detail_view.id = "profil_detail";
+		detail_view.setAttribute('class',' bg-light search-block p-5 w-80 l-10 text-left');
+		detail_view.style.bottom = "30%";
+		detail_view.innerHTML = '\
+								<div class="row margin-t">\
+		                            <div class="col">\
+		                                <label class="text-whitesmoke ">Latitude : '+ profils_list[i].latitude +'</label>\
+		                            </div>\
+		                            <div class="col">\
+		                                <label class="text-whitesmoke ">Longitude : '+ profils_list[i].longitude +'</label>\
+		                            </div>\
+		                        </div>\
+		                        <div class="row margin-t">\
+		                            <div class="col">\
+		                                <label class="text-whitesmoke ">Horaire '+ profils_list[i].time +'</label>\
+		                            </div>\
+		                            <div class="col">\
+		                                <label class="text-whitesmoke">Type de crime : '+ profils_list[i].crime +'</label>\
+		                            </div>\
+		                        </div>\
+		                        <div class="row margin-t">\
+		                            <div class="col">\
+		                                <label class="text-whitesmoke ">Identité : '+ profils_list[i].identity +'</label>\
+		                            </div>\
+		                        </div>\
+		                        <div class="row">\
+		                        	<button class="row btn btn-danger rounded-25 m-auto" type="button" onclick="closeDetail();">X</button>\
+		                        	<button class="row btn btn-success rounded-25 m-auto" type="button" onclick="closeDetail(); dismissBlock('+i+')">Menace éliminé !</button>\
+		                        </div>';
+
+
+		document.body.appendChild(detail_view);
+	}
+	</script>
 </html>
