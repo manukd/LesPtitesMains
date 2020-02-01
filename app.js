@@ -11,6 +11,7 @@ var connect = require('./routes/connect');
 var inscription = require('./routes/inscription');
 var agence = require('./routes/agence');
 var profil = require('./routes/profil');
+var connexion = require('./routes/connexion')
 
 
 var app = express();
@@ -31,6 +32,7 @@ app.use('/connect', connect);
 app.use('/inscription', inscription);
 app.use('/agence', agence);
 app.use('/profil', profil);
+app.use('/connexion', connexion);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
