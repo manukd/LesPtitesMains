@@ -18,35 +18,35 @@
                     <h1 class="logo-badge text-whitesmoke"><img src="/img/smile.png" alt="smile" width="120" height="120"></h1>
                 </div>
                 <div class="container-content text-l">
-                    <form class="margin-t">
+                    <form class="margin-t" action="/inscription" method="post">
                         <div class="row">
                             <div class="col">
                                 <label class="text-whitesmoke text-left">Nom d'utilisateur :</label>
-                                <input type="text" class="form-control" placeholder="Nom d'utilisateur" required="">
+                                <input name="username" type="text" class="form-control" placeholder="Nom d'utilisateur" required="">
                             </div>
                             <div class="col">
                                 <label class="text-whitesmoke ">Mot de passe :</label>
-                                <input type="password" class="form-control" placeholder="*******" required="">
+                                <input name="password" type="password" class="form-control" placeholder="*******" required="">
                             </div>
                         </div>
                         <div class="row margin-t">
                             <div class="col">
                                 <label class="text-whitesmoke ">Nom :</label>
-                                <input type="text" class="form-control" placeholder="Nom" required="">
+                                <input name="name" type="text" class="form-control" placeholder="Nom" required="">
                             </div>
                             <div class="col">
                                 <label class="text-whitesmoke ">Prénom :</label>
-                                <input type="text" class="form-control" placeholder="Prénom" required="">
+                                <input name="surname" type="text" class="form-control" placeholder="Prénom" required="">
                             </div>
                         </div>
                         <div class="row margin-t">
                             <div class="col">
                                 <label class="text-whitesmoke ">Date de naissance :</label>
-                                <input type="text" class="form-control" placeholder="JJ/MM/AAAA" required="">
+                                <input name="age" type="text" class="form-control" placeholder="JJ/MM/AAAA" required="">
                             </div>
                             <div class="col">
                                 <label class="text-whitesmoke">Genre :</label>
-                                <select class="custom-select  form-control"  id="inlineFormCustomSelectPref">
+                                <select name="gender" class="custom-select  form-control"  id="inlineFormCustomSelectPref">
                                     <option selected>-</option>
                                     <option value="1">Femme</option>
                                     <option value="2">Homme</option>
@@ -63,7 +63,7 @@
                         <div class="row margin-t">
                             <div class="col">
                                 <label class="text-whitesmoke ">Adresse :</label>
-                                <input type="text" class="form-control" placeholder="Pays, Ville, Adresse" required="">
+                                <input name="address" type="text" class="form-control" placeholder="Pays, Ville, Adresse" required="">
                             </div>
                         </div>
                         <div class="row margin-t">
@@ -75,17 +75,17 @@
                         <div class="row margin-t">
                             <div class="col">
                                 <label class="text-whitesmoke ">Pouvoir :</label>
-                                <input type="text" class="form-control" placeholder="Vol, Invisibilité, Grande force..." required="">
+                                <input name="power" type="text" class="form-control" placeholder="Vol, Invisibilité, Grande force..." required="">
                             </div>
                         </div>
                         <div class="row margin-t">
                             <div class="col">
                                 <label class="text-whitesmoke ">Nombre de vies sauvées :</label>
-                                <input type="text" class="form-control" placeholder="0" required="">
+                                <input name="saved_lives" ype="text" class="form-control" placeholder="0" required="">
                             </div>
                             <div class="col">
                                 <label class="text-whitesmoke ">Nombre de criminels arrêtés :</label>
-                                <input type="text" class="form-control" placeholder="0" required="">
+                                <input name="arrested_baddies" type="text" class="form-control" placeholder="0" required="">
                             </div>
                         </div>
 

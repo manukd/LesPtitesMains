@@ -12,8 +12,11 @@ var connect = require('./routes/connect');
 var inscription = require('./routes/inscription');
 var agence = require('./routes/agence');
 var profil = require('./routes/profil');
+
 var connexion = require('./routes/connexion');
 var accueil = require('./routes/accueil')
+var report = require('./routes/report')
+
 
 var app = express();
 // view engine setup
@@ -38,6 +41,7 @@ app.use('/agence', agence);
 app.use('/profils', profil);
 app.use('/connexion', connexion);
 app.use('/accueil', accueil);
+app.use('/report', report);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
