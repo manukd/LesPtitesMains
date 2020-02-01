@@ -15,44 +15,61 @@
   	</head>
 
 	<body class="text-center fade-in h-100" style="overflow: hidden;">
-		<div id="background-flow" class="noselect" ></div>
 
-		<div class="col-md-12 search-block">
-			<header class="flaot-none align-text-center text-center my-3">
-		        <div class="inner">
-		          <img class="w-20" src="images/profil.png">
+		<div >
+			<header class="row align-text-center text-center m-auto">
+		        <div class="inner w-20 m-auto">
+		          <img class="w-50" src="images/profil.png">
 		          <h3 class="my-1 text-light">NOM PRENOM</h3>
-		          <nav class="nav nav-masthead justify-content-center">
-		            <a class="nav-link" href="/">Accueil</a>
-		            <a class="nav-link" href="/profils">Profils</a>
-					  <a class="nav-link" href="/crime">Crimes</a>
-					  <% if(sess.username != undefined) {%>
-						  <a class="nav-link" href="/threats">Les menaces</a>
-					  <%} else {%>
-						  <a class="nav-link" href="/connexion">Sign up / Sing in</a>
-					  <%}%>
-		          </nav>
 		        </div>
 	      	</header>
+		      	<form action="">
+				<table class="w-70 m-auto">
+					<tr>
+						<nav class="nav nav-masthead justify-content-center">
+			            <a class="nav-link" href="/">Accueil</a>
+			            <a class="nav-link" href="/profils">Profils</a>
+						  <a class="nav-link" href="/crime">Repoter un crime</a>
+						  <% if(sess.username != undefined) {%>
+							  <a class="nav-link active" href="/threats">Menaces</a>
+						  <%} else {%>
+							  <a class="nav-link" href="/connexion">Connexion / Inscription </a>
+						  <%}%>
+			          </nav>
+					</tr>
+					<tr>
+						<td class="pl-5">
+						  <label for="inputQuestion" class="sr-only ">Question</label>
+						  <input type="text" id="inputQuestion" class="form-control rounded-25" placeholder="Rechercher une menaces..." required="true" autofocus="">
+						</td>
+						<td class="w-10 p-1 text-left">
+							<button id="inputBtnQuestion" class="btn btn-danger rounded-25 mx-2" type="submit" action="test()"><img  src="images/loupe.svg"  alt="" width="24" height="24" title="search"></button>
+						</td>
+					</tr>
+					<tr>
 
-	      	<form class="mx-5" action="">
-			<table class="w-80 m-auto">
-				<tr>
-					<td class="pl-5">
-					  <label for="inputQuestion" class="sr-only ">Question</label>
-					  <input type="text" id="inputQuestion" class="form-control rounded-25" placeholder="Search for a loadThreats..." required="true" autofocus="">
-					</td>
-					<td class="w-10 p-1 text-left">
-						<button id="inputBtnQuestion" class="btn btn-danger rounded-25 mx-2" type="submit" action="test()"><img  src="images/loupe.svg"  alt="" width="24" height="24" title="search"></button>
-					</td>
-				</tr>
-			</table>
+						<div>
+							<div  class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" id="choiceHoraire" name="choiceMode" value="Horaire">
+								<label class="mx-2 text-light text-shadow" for="choiceNom"> Horaire </label>
+							</div>
+							<div  class="form-check form-check-inline">
+								<input class="form-check-input" id="choiceType" type="radio" name="choiceMode" value="Type">
+								<label class="mx-2 text-light text-shadow"  for="choicePrenom"> Type </label>
+							</div>
+							<div  class="form-check form-check-inline">
+								<input class="form-check-input" id="choiceId" type="radio" name="choiceMode" value="Identité">
+								<label class="mx-2 text-light text-shadow"  for="choicePouvoir"> Identité </label>
+							</div>
+						</div>
+					</tr>
+				</table>
 
-			</form>
-
+				</form>
 
 	    </div>
 
+		<div id="background-flow" class="noselect " style="animation: none;" ></div>
 		<footer class="container fixed-bottom text-center mt-1 text-muted ">
 			<!-- Copyright -->Les p'tites mains © 2020
 		</footer>
