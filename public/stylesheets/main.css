@@ -6,7 +6,152 @@ body {
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
+
+    background-color: #0c0c0c;
 }
+
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+
+.rounded-25{
+  border-radius: 30px
+}
+
+.w-10{
+  width: 10%
+}
+.w-20{
+  width: 20%
+}
+.w-30{
+  width: 30%
+}
+.w-40{
+  width: 40%
+}
+.w-60{
+  width: 60%
+}
+.w-70{
+  width: 70%
+}
+.w-80{
+  width: 80%
+}
+.w-90{
+  width: 90%
+}
+
+.search-block{
+  position: fixed;
+  bottom: 45%;
+  z-index: 2;
+  /* left: 50%; */
+}
+
+.l-10{
+  left: 10%;
+}
+
+.rounded-image{
+  border-radius: 50%
+}
+
+.nav-link{
+  color: gray;
+  text-shadow: black 1px 0 5px;
+  text-decoration: none;
+}
+
+.active{
+  color: white;
+  text-decoration: none;
+}
+
+.nav-link:hover{
+  color: lightgray;
+}
+
+.title{
+  color: rgba(150,20,20,1);
+  font-size: 400%;
+  font-family: Ebrima;
+  font-weight: bold;
+
+  text-shadow: black 1px 0 5px;
+}
+
+.profil{
+  opacity: 0.4;
+}
+
+.profil:hover {
+  opacity: 1;
+}
+
+#background-flow{
+  animation-name: movement;
+  animation-duration: 60s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes movement {
+  0%  {margin-top: 0px;}
+  50% {margin-top: -200px;}
+  100%  {margin-top: 0px;}
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+}
+
+/* Fade IN and OUT annimation */
+
+.fade-in {
+  animation : fadeInAnimation 1.5s;
+}
+
+.fade-out{
+  animation : fadeOutAnimation 1s;
+}
+
+@keyframes fadeInAnimation{
+  from { opacity : 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOutAnimation {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
 
 /* Text Align */
 .text-c {
@@ -194,4 +339,16 @@ body {
     font-weight: 800;
     letter-spacing: -10px;
     margin-bottom: 0;
+
 }
+
+.video-fluid {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    height: auto;
+}
+.adresse {
+    width: 90%;
+}
+
