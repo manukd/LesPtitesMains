@@ -17,4 +17,13 @@ router.get('/', function(req, res, next) {
   })
 });
 
+router.post('/', function (req, res, next) {
+  db.collection("users").find({name: req.body.request}).toArray(function(err,result) {
+    console.log(result);
+    if (err) throw err;
+    console.log(result);
+    res.render('profils', { user: result , sess: req.session });
+  })
+});
+
 module.exports = router;
